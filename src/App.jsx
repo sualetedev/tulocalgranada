@@ -14,7 +14,7 @@ const NAV_LINKS = [
 ];
 
 const STATS = [
-  { value: 85, suffix: '+', label: 'Locales comprados' },
+  { value: 30, suffix: '+', label: 'Locales comprados' },
   { value: 98, suffix: '%', label: 'Clientes satisfechos' },
   { value: 8, suffix: '', label: 'Años en Granada' },
   { value: 48, suffix: 'h', label: 'Respuesta media' },
