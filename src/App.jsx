@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from 'react';
 const HERO_IMAGE = '/9E991FD8-A37F-4031-BE0266F54F12C0E4.webp';
 const LOCAL_IMAGE = '/3733264845.jpg';
 const WEB3FORMS_KEY = 'b5311297-814b-4d45-9a90-a3a8531d0b40';
-const WHATSAPP_NUMBER = '34600000000';
+const WHATSAPP_NUMBER = '34697383652';
 
 const NAV_LINKS = [
   { href: '#inicio', label: 'Inicio' },
