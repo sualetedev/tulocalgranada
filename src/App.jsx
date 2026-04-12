@@ -1,9 +1,16 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 const HERO_IMAGE = '/9E991FD8-A37F-4031-BE0266F54F12C0E4.webp';
-const LOCAL_IMAGE = '/3733264845.jpg';
+const LOCAL_IMAGE = '/WhatsApp Image 2026-04-10 at 12.19.50.jpeg';
 const WEB3FORMS_KEY = 'b5311297-814b-4d45-9a90-a3a8531d0b40';
 const WHATSAPP_NUMBER = '34697383652';
+
+const GALLERY_ITEMS = [
+  { src: '/WhatsApp Image 2026-04-10 at 12.19.50.jpeg', alt: 'Local comercial en Zaidín', label: 'Zaidín · 120 m² · Vendido' },
+  { src: '/WhatsApp Image 2026-04-10 at 12.19.51.jpeg', alt: 'Local comercial en Chana', label: 'Chana · 85 m² · Vendido' },
+  { src: '/WhatsApp Image 2026-04-10 at 12.19.52.jpeg', alt: 'Local comercial en Beiro', label: 'Beiro · 150 m² · Vendido' },
+  { src: '/WhatsApp Image 2026-04-10 at 12.19.521.jpeg', alt: 'Local comercial en Albaicín', label: 'Albaicín · 70 m² · Vendido' },
+];
 
 const NAV_LINKS = [
   { href: '#inicio', label: 'Inicio' },
@@ -401,18 +408,14 @@ function App() {
           <h2>Operaciones recientes</h2>
           <p className="section-subtitle">Locales que hemos comprado recientemente en Granada.</p>
           <div className="images-grid">
-            <figure className="image-item">
-              <img src={HERO_IMAGE} alt="Local adquirido en el centro de Granada" />
-              <div className="image-overlay">
-                <span>Centro · 180 m² · Vendido</span>
-              </div>
-            </figure>
-            <figure className="image-item">
-              <img src={LOCAL_IMAGE} alt="Local adquirido en el Zaidín" />
-              <div className="image-overlay">
-                <span>Zaidín · 95 m² · Vendido</span>
-              </div>
-            </figure>
+            {GALLERY_ITEMS.map((item) => (
+              <figure key={item.src} className="image-item">
+                <img src={item.src} alt={item.alt} />
+                <div className="image-overlay">
+                  <span>{item.label}</span>
+                </div>
+              </figure>
+            ))}
           </div>
         </Reveal>
 

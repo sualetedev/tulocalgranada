@@ -625,13 +625,14 @@ body {
 
 .images-grid {
   display: grid;
-  gap: 18px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
   margin-top: 18px;
 }
 
-@media (min-width: 640px) {
+@media (max-width: 600px) {
   .images-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }
 
@@ -641,19 +642,25 @@ body {
   overflow: hidden;
   border-radius: 14px;
   cursor: pointer;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.4s ease;
+}
+
+.image-item:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
 .image-item img {
   width: 100%;
   display: block;
   object-fit: cover;
-  height: 260px;
+  height: 240px;
   transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), filter 0.4s ease;
 }
 
 .image-item:hover img {
   transform: scale(1.06);
-  filter: brightness(0.8);
+  filter: brightness(0.75);
 }
 
 .image-overlay {
@@ -661,8 +668,8 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 16px;
-  background: linear-gradient(to top, rgba(15, 23, 42, 0.85), transparent);
+  padding: 14px 16px;
+  background: linear-gradient(to top, rgba(15, 23, 42, 0.9), transparent);
   transform: translateY(100%);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -672,9 +679,10 @@ body {
 }
 
 .image-overlay span {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   color: #fff;
+  letter-spacing: 0.01em;
 }
 
 /* ─── FAQ ─── */
